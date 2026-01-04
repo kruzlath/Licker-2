@@ -15,7 +15,8 @@ from Censors.Bubble import *
 from Censors.Fracture import *
 from Censors.Defragment import *
 from Censors.Memory import *
-test_censor=Memory_Censor(resize_image(pygame.image.load("Characters/secret.jpg")),10,10)
+from Censors.Fruit_Ninja import *
+test_censor=Fruit_Censor(resize_image(pygame.image.load("Characters/Astolfo/4.jpg")))
 
 while run:
     AEH.update()

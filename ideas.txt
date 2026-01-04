@@ -4,7 +4,7 @@ So, censors that i want:
  3. bouncing bubbles, revealing the picture after you click on them
  4. Fracturing, that fractures a complete picture into smaller fragments, with the cracks being the original picture. Or a grid, with offset grid points, that'd be a cool one too. Mosaic style. 
  5. The other defragmenting puzzle that the other person made
-8. Copies memory puzzle
+ 8. Copies memory puzzle
 10. Tetris
 12. Fruit Ninja
 14. Minesweeper

@@ -31,6 +31,8 @@ class Memory_Censor(Censor):
                 for y in range(self.y_cards):
                     if self.cards[y][x].removed:
                         continue
+                    if len(self.cards[y][x].animations)>0:
+                        continue
                     if (x+1)*self.card_width>AEH.mouse_pos[0]>=x*self.card_width and (y+1)*self.card_height>AEH.mouse_pos[1]>=y*self.card_height:
                         if self.cards[y][x].data["Side On Top"]=="Back":
                             if self.current_cards_revealed>=2:
