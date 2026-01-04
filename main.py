@@ -9,7 +9,7 @@ win=pygame.Surface((1920,1080))
 run=True
 
 AEH=AllEventHandler(SCREEN_SIZE)
-
+from Censors.Light_In_The_Darkness import *
 from Censors.Picaso import *
 from Censors.Bubble import *
 from Censors.Fracture import *
@@ -17,7 +17,9 @@ from Censors.Defragment import *
 from Censors.Memory import *
 from Censors.Fruit_Ninja import *
 from Censors.minesweeper import *
-test_censor=Mine_Sweeper_Censor(resize_image(pygame.image.load("Characters/Astolfo/6.jpg")),48,0.14)
+base_image=resize_image(pygame.image.load("Characters/Astolfo/7.jpg"))
+censors=[Mine_Sweeper_Censor(base_image,32,0.13)]
+
 
 
 while run:
@@ -25,9 +27,10 @@ while run:
     if AEH.exit:
         run=False
     win.fill((0,0,0))
-    test_censor.update(AEH)
-    test_censor.draw()
-    win.blit(test_censor.surface,(0,0))
+    for i in censors:
+        i.update(AEH)
+        i.draw()
+    win.blit(i.surface,(0,0))
     SCREEN.blit(pygame.transform.scale(win,SCREEN_SIZE),(0,0))
     pygame.display.update()
 pygame.quit()
