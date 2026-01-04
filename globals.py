@@ -28,6 +28,9 @@ class Censor:
         self.picture=picture
         self.map=pygame.Surface(self.picture.get_size())
         self.surface=pygame.Surface(self.picture.get_size())
+        self.width=self.picture.get_width()
+        self.height=self.picture.get_height()
+        self.psize=self.picture.get_size()
     def draw(self):
         self.surface.blit(self.picture,(0,0))
         self.surface.blit(self.map,(0,0),special_flags=pygame.BLEND_MULT)

@@ -16,9 +16,8 @@ from Censors.Fracture import *
 from Censors.Defragment import *
 from Censors.Memory import *
 from Censors.Fruit_Ninja import *
-test_censor=Fruit_Censor(resize_image(pygame.image.load("Characters/Astolfo/6.jpg")))
-test_censor_2=Memory_Censor(test_censor.surface,9,8)
-test_censor_3=Bubble_Censor(test_censor_2.surface,bubble_speed=1)
+from Censors.minesweeper import *
+test_censor=Mine_Sweeper_Censor(resize_image(pygame.image.load("Characters/Astolfo/6.jpg")),48,0.14)
 
 
 while run:
@@ -28,11 +27,7 @@ while run:
     win.fill((0,0,0))
     test_censor.update(AEH)
     test_censor.draw()
-    test_censor_2.update(AEH)
-    test_censor_2.draw()
-    test_censor_3.update(AEH)
-    test_censor_3.draw()
-    win.blit(test_censor_3.surface,(0,0))
+    win.blit(test_censor.surface,(0,0))
     SCREEN.blit(pygame.transform.scale(win,SCREEN_SIZE),(0,0))
     pygame.display.update()
 pygame.quit()
