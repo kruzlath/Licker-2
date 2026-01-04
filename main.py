@@ -15,7 +15,7 @@ from Censors.Bubble import *
 from Censors.Fracture import *
 from Censors.Defragment import *
 from Censors.Memory import *
-test_censor=Memory_Censor(resize_image(pygame.image.load("Characters/secret.jpg")))
+test_censor=Memory_Censor(resize_image(pygame.image.load("Characters/secret.jpg")),10,10)
 
 while run:
     AEH.update()

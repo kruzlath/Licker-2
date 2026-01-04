@@ -8,7 +8,7 @@ class Memory_Censor(Censor):
         self.cards=[[Card() for i in range(x_cards)] for i in range(y_cards)]
         unused_cards=[(i%x_cards,i//x_cards) for i in range(x_cards*y_cards)]
         for i in range(int(x_cards*y_cards/2)):
-            slutty_word=slutty_word_list[i]
+            slutty_word=slutty_word_list[i%len(slutty_word_list)]
             for i in range(2):
                 this_card=choice(unused_cards)
                 unused_cards.remove(this_card)
