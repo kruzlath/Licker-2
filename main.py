@@ -31,6 +31,8 @@ while run:
         i.update(AEH)
         i.draw()
     win.blit(i.surface,(0,0))
+    if censors[0].revealed_squares+censors[0].total_mines==censors[0].pixel_count[0]*censors[0].pixel_count[1]:
+        win.fill((255,0,0))
     SCREEN.blit(pygame.transform.scale(win,SCREEN_SIZE),(0,0))
     pygame.display.update()
 pygame.quit()

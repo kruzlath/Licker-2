@@ -43,6 +43,7 @@ class Mine_Sweeper_Censor(Censor):
         self.negative_surface.set_colorkey(self.negative_colorkey)
         self.on_top_of_negative_surface=pygame.Surface(self.picture.get_size())
         self.on_top_of_negative_surface.set_colorkey((0,0,0))
+        self.revealed_squares=0
     def update(self,AEH:AllEventHandler):
         for x in range(self.pixel_count[0]):
             for y in range(self.pixel_count[1]):
@@ -67,6 +68,7 @@ class Mine_Sweeper_Censor(Censor):
             self.time_till_new_game=2
             self.game_over=True
         else:
+            self.revealed_squares+=1
             self.reveal_map[y][x]=1
             if self.mine_sum_map[y][x]==0:
                 for x_offset in range(3):
