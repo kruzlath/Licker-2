@@ -17,7 +17,7 @@ from Censors.Defragment import *
 from Censors.Memory import *
 from Censors.Fruit_Ninja import *
 test_censor=Fruit_Censor(resize_image(pygame.image.load("Characters/Astolfo/4.jpg")))
-
+test_censor_2=Picaso_Censor(test_censor.surface,10,1)
 while run:
     AEH.update()
     if AEH.exit:
@@ -25,7 +25,10 @@ while run:
     win.fill((0,0,0))
     test_censor.update(AEH)
     test_censor.draw()
-    win.blit(test_censor.surface,(0,0))
+    test_censor_2.update(AEH)
+    test_censor_2.draw()
+    
+    win.blit(test_censor_2.surface,(0,0))
     SCREEN.blit(pygame.transform.scale(win,SCREEN_SIZE),(0,0))
     pygame.display.update()
 pygame.quit()

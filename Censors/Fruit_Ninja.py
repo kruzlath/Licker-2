@@ -60,10 +60,11 @@ class Fruit_Censor(Censor):
                 i.dead=True
                 log_vector=[log(abs(AEH.mouse_rel[i]+1.7),1.7)*((AEH.mouse_rel[i]>0)*2-1) for i in range(2)]
                 self.force_sum=(log_vector[0]+i.xspeed*1.7,log_vector[1]+i.yspeed*1.7)
-                for ii in range(randint(4,7)):
-                    self.particles.append(Particle(self,i))
+                
                 if i.type==0:
                     pygame.draw.circle(self.map,(255,255,255),(i.x,i.y),35)
+                    for ii in range(randint(4,7)):
+                        self.particles.append(Particle(self,i))
                 else:
                     pygame.draw.circle(self.map,(0,0,0),(i.x,i.y),105)
             if i.dead:

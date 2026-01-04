@@ -6,6 +6,6 @@ So, censors that i want:
  5. The other defragmenting puzzle that the other person made
  8. Copies memory puzzle
 10. Tetris
-12. Fruit Ninja
+ 12. Fruit Ninja
 14. Minesweeper
 15. A small casino, with blackjack, roulette, and perhaps some more games that come to mind, revealing more and more as the money stack grows. 
