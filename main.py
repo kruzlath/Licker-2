@@ -8,14 +8,14 @@ SCREEN_SIZE=SCREEN.get_size()
 win=pygame.Surface((1920,1080))
 run=True
 
-
 AEH=AllEventHandler(SCREEN_SIZE)
 
 from Censors.Picaso import *
 from Censors.Bubble import *
 from Censors.Fracture import *
 from Censors.Defragment import *
-test_censor=Defragment_Censor(resize_image(pygame.image.load("Characters/secret.jpg")),layers=5)
+from Censors.Memory import *
+test_censor=Memory_Censor(resize_image(pygame.image.load("Characters/secret.jpg")))
 
 while run:
     AEH.update()
