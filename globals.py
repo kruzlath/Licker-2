@@ -18,7 +18,7 @@ def resize_image(image):
     
     return pygame.transform.scale(image, (new_width, new_height))
 
-default_porn_picture=pygame.image.load("Characters/Astolfo/2.jpg")
+default_porn_picture=pygame.image.load("Characters/Astolfo/2.png")
 default_porn_picture=resize_image(default_porn_picture)
 
 class Censor:
