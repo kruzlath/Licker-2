@@ -1,7 +1,26 @@
 import pygame
 from math import *
 from random import *
-default_porn_picture=pygame.image.load("Characters/Astolfo/2.png")
+
+PICTURE_WIDTH=1920
+PICTURE_HEIGHT=1080
+
+def resize_image(image):
+    original_width, original_height = image.get_size()
+    aspect_ratio = original_width / original_height
+    
+    if PICTURE_WIDTH / PICTURE_HEIGHT > aspect_ratio:
+        new_height = PICTURE_HEIGHT
+        new_width = int(PICTURE_HEIGHT * aspect_ratio)
+    else:
+        new_width = PICTURE_WIDTH
+        new_height = int(PICTURE_WIDTH / aspect_ratio)
+    
+    return pygame.transform.scale(image, (new_width, new_height))
+
+default_porn_picture=pygame.image.load("Characters/Astolfo/2.jpg")
+default_porn_picture=resize_image(default_porn_picture)
+
 class Censor:
     def __init__(self,picture=default_porn_picture):
         self.is_complete_at=0.8 
