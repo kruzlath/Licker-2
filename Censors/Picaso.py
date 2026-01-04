@@ -6,7 +6,6 @@ class Picaso_Censor(Censor):
         self.mask=pygame.Surface(self.map.get_size())
         self.size=size
         self.cc=color_channels
-        #self.mask.set_colorkey((0,0,0))
         self.is_holding_down=False
     def update(self,AEH:AllEventHandler):
         if AEH.click[0]:
@@ -32,4 +31,3 @@ class Picaso_Censor(Censor):
                     (ending_point[0]+cos(angle+pi/2)*self.size,ending_point[1]+sin(angle+pi/2)*self.size),
                 ))
                 self.map.blit(self.mask,(0,0),special_flags=pygame.BLEND_ADD)
-                #center(self.mask,self.map,AEH.mouse_pos[0],AEH.mouse_pos[1],pygame.BLEND_ADD)

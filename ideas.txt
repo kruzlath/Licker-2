@@ -2,7 +2,7 @@ So, censors that i want:
  1. Light in the darkness
  2. Lines all over the screen, that the player can drag. 
 3. bouncing bubbles, revealing the picture after you click on them
-4. Fracturing, that fractures a complete picture into smaller fragments, with the cracks being the original picture. 
+4. Fracturing, that fractures a complete picture into smaller fragments, with the cracks being the original picture. Or a grid, with offset grid points, that'd be a cool one too. Mosaic style. 
 5. The other defragmenting puzzle that the other person made
 8. Copies memory puzzle
 10. Tetris

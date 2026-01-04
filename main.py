@@ -13,7 +13,8 @@ AEH=AllEventHandler(SCREEN_SIZE)
 
 from Censors.Picaso import *
 from Censors.Bubble import *
-test_censor=Picaso_Censor(size=4,color_channels=0)
+from Censors.Fracture import *
+test_censor=Fracture_Censor()
 
 while run:
     AEH.update()

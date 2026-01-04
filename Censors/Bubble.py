@@ -40,5 +40,3 @@ class Bubble_Censor(Censor):
                 pygame.draw.circle(self.map,(255,255,255),(i.x,i.y),i.size)
             else:
                 pygame.draw.circle(self.map,(255,255,255),(i.x,i.y),i.size,1)
-        #if AEH.click[0]:
-        #    center(self.mask,self.map,AEH.mouse_pos[0],AEH.mouse_pos[1],pygame.BLEND_ADD)

@@ -48,7 +48,6 @@ class AllEventHandler:
 
 
 def center(sprite,surface,x,y,special_flags:int=0): #Centers a sprite on specific coordinates
-    #print(x,y)
     surface.blit(sprite,(x-sprite.get_width()/2,y-sprite.get_height()/2),special_flags=special_flags)
 fonts={}
 texts={}
