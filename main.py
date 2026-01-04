@@ -15,7 +15,7 @@ from Censors.Picaso import *
 from Censors.Bubble import *
 from Censors.Fracture import *
 from Censors.Defragment import *
-test_censor=Defragment_Censor(layers=5)
+test_censor=Defragment_Censor(resize_image(pygame.image.load("Characters/secret.jpg")),layers=5)
 
 while run:
     AEH.update()
